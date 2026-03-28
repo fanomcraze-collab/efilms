@@ -1,0 +1,135 @@
+<!-- SCREEN 1 - INTRO -->
+<div id="intro">
+  <video id="introVideo" muted playsinline preload="auto">
+    <source src="https://storage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+  </video>
+  <div id="introLogo">EFILMS</div>
+</div>
+
+<!-- SCREEN 2 - LOGIN -->
+<div id="loginPage">
+  <div id="loginBg">
+    <div class="bg bg1"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+  </div>
+  <div class="overlay"></div>
+  <div class="loginBox">
+    <div class="logo">EFILMS</div>
+    <div class="subtitle">Cinematic Streaming OS</div>
+    <input id="username" placeholder="Username" autocomplete="off">
+    <input id="password" type="password" placeholder="Password">
+    <button id="loginBtn" class="btnLogin">SIGN IN</button>
+    <p id="error"></p>
+  </div>
+</div>
+
+<!-- SCREEN 3 - WHO'S WATCHING -->
+<div id="profiles">
+  <h1>WHO'S WATCHING?</h1>
+  <div class="profileRow">
+    <div class="profile" data-name="Alex">A</div>
+    <div class="profile" data-name="Kim">K</div>
+  </div>
+</div>
+
+<!-- SCREEN 4 - BOOT -->
+<div id="boot">
+  <div class="bootGlow"></div>
+  <div id="welcome">WELCOME</div>
+  <div id="bootLines">
+    <div>Initializing system...</div>
+    <div>Loading EFILMS engine...</div>
+    <div>Syncing 4K UI...</div>
+    <div>Starting experience...</div>
+  </div>
+</div>
+
+<!-- SCREEN 5 - MAIN APP -->
+<div id="app">
+  <div class="sidebar">
+    <div class="sidebarLogo">EFILMS</div>
+    <div class="nav active" data-section="home">Home</div>
+    <div class="nav" data-section="movies">Movies</div>
+    <div class="nav" data-section="tv">TV</div>
+    <div class="nav" data-section="search">Search</div>
+    <div class="nav" data-section="settings">Settings</div>
+    <div class="nav" data-section="support">Support</div>
+    <div class="nav sidebarLogout" data-section="logout">Logout</div>
+  </div>
+  <div class="main">
+    <div class="hero">
+      <div class="heroGlow"></div>
+      <div class="heroText">
+        <h1>THE CINEMATIC EXPERIENCE</h1>
+        <p>Ultra 4K &middot; Dolby Vision &middot; Spatial Audio</p>
+        <div class="buttons">
+          <button class="play">&#9654; Play</button>
+          <button class="more">More Info</button>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>&#128293; TRENDING NOW</h2>
+      <div class="movieRow" id="trendingRow"></div>
+    </div>
+    <div class="section">
+      <h2>&#11088; TOP RATED</h2>
+      <div class="movieRow" id="topRatedRow"></div>
+    </div>
+    <div class="section">
+      <h2>&#127916; POPULAR</h2>
+      <div class="movieRow" id="popularRow"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SEARCH OVERLAY -->
+<div id="searchOverlay">
+  <div class="searchHeader">
+    <div class="searchLogo">EFILMS</div>
+    <button class="searchCloseBtn" id="searchCloseBtn">&#10005;</button>
+  </div>
+  <div class="searchBody">
+    <div class="searchInputWrap">
+      <span class="searchIcon">&#128269;</span>
+      <input type="text" id="searchInput" placeholder="Search movies, shows..." autocomplete="off">
+    </div>
+    <div class="movieRow" id="searchResults"></div>
+    <div id="searchEmpty" class="searchEmpty">Start typing to search...</div>
+  </div>
+</div>
+
+<!-- SUPPORT OVERLAY -->
+<div id="supportOverlay">
+  <div class="supportPanel">
+    <div class="supportHeader">
+      <div class="supportTitle">EFILMS SUPPORT</div>
+      <button class="supportCloseBtn" id="supportCloseBtn">&#10005;</button>
+    </div>
+    <div class="supportBody">
+      <p class="supportSubtitle">We are here to help. Send us your issue and we will get back to you.</p>
+      <div class="supportField">
+        <label>Username</label>
+        <input type="text" id="supportUsername" readonly>
+      </div>
+      <div class="supportField">
+        <label>Your Message</label>
+        <textarea id="supportMessage" placeholder="Describe your issue..."></textarea>
+      </div>
+      <button class="supportSendBtn" id="supportSendBtn">SEND MESSAGE</button>
+      <div id="supportStatus" class="supportStatus"></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRAILER MODAL -->
+<div id="trailerModal">
+  <div class="modalInner">
+    <div class="modalHeader">
+      <div class="modalTitle" id="modalTitle"></div>
+      <div class="modalClose" id="modalClose">&#10005;</div>
+    </div>
+    <iframe id="trailerFrame" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+  </div>
+</div>
